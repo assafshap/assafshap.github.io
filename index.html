@@ -25,7 +25,40 @@ h2 {
 
 <h2 style="color: #2e6c80;">Publications</h2>
 <p>&nbsp;</p>
-<h3><strong>Time Scales of the Fredrickson-Andersen Model on Polluted $\mathbb{Z}^2$ and $\mathbb{Z}^3$</strong></h3>
+
+<h3>Topologically induced metastability in periodic XY chain</h3>
+<p>With <a href="https://www.lpsm.paris/pageperso/cosco/">Clément Cosco</a>.
+<i>arXiv preprint <a href="https://arxiv.org/abs/2001.07950">arXiv:2001.07950</a> </i>(2019).</p>
+
+<div style="float:right"\>
+	<video id="topmetastabilityvid" width="400" poster="windingnum_rw.png" style="cursor:pointer">
+		<source src="change_windnum.webm">
+	</video>
+</div>
+
+<script>
+var video1 =  document.getElementById("topmetastabilityvid");
+video1.addEventListener('ended', function() {
+	video1.load();
+	video1.removeAttribute("controls");
+});
+video1.addEventListener('click', function() {
+	video1.play();
+	video1.setAttribute("controls", "controls");
+});
+</script>
+
+<p>The purpose of this project was to try to approach a model with some non-trivial topology from the dynamics point of view. The most famous model with this type of behavior is the XY model in two dimensions. In this model there's a <a href="https://iopscience.iop.org/article/10.1088/0022-3719/6/7/010">critical temperature</a>, starting from which isolated vortices could appear. Analyzing this model is very difficult already <a href="https://projecteuclid.org/euclid.cmp/1103920388"> in equilibrium</a>, and adding dynamics on top of that complicates things even further. We've decided to study a one dimensional chain, that still has some interesting topological behavior but is much easier to understand.</p>
+
+<p>So we take a chain of rotors, $X_1,\dots,X_N$, each lives on the cycle $\mathbb{R}/2\pi\mathbb{Z}$. They interact via the XY Hamiltonian, $H=-J\sum_{i=1} \cos(X_{i}-X_{i-1})$, and in order to see interesting topological effects we take periodic boundary conditions ($X_0=X_N$). When the temperature is fixed and the size of the system goes to infinity, it becomes trivial, because fixing one rotor to whatever value we want costs a finite energy, and once we do that the spins to the right no longer depend on the spins to the left. So correlations decay exponentially fast, and we can't expect to see any global behavior. If we do want to see topological effects, we should take the interaction strength $\beta J$ to infinity with $N$.
+</p>
+<p>Imagine that, for some fixed large $N$, the interaction $\beta J$ is so big, that it forces all angles $X_i-X_{i-1}$ to be very small. This way, the rotors look like a continuous field – give each point $t\in \mathbb{R}/\mathbb{Z}$ the value $X_{\lfloor Nt \rfloor}$. When $N$ is large, we can think of this map as (approximately) a continuous function from $\mathbb{R}/\mathbb{Z}$ to $\mathbb{R}/2\pi\mathbb{Z}$. If this is indeed the case, that function will have a winding number. The winding number is an integer, and it doesn't change under continuous deformations of the field, so if the dynamics we take is continuous, the winding number will stay fixed. An interesting aspect of this behavior is that it could keep the system out of equilibrium. The minimal energy is when the winding number is $0$, so when $\beta J$ is large the equilibrium should concentrate there. So if we start with a configuration whose winding number is non-zero the system could never reach equilibrium, which means that the state is a (meta)stable non-equilibrium state. This will remain true until the continuous field approximation breaks down, and only then the winding number would be able to change. 
+</p>
+<p>This approximation of a continuous field is based on the assumption that all the angles between neighboring rotors are small. It's actually not difficult to see that the winding number of the discrete chain could only change when two neighboring rotors point at opposite directions. This costs a free energy barrier that has two parts – the energy difference $2J$, and an entropy term $\log N$ coming from the fact that there are $N$ possible pairs of rotors. In the paper we analyzed the Itô process given by $\text{d}X(t)=-\nabla H \text{d}t + (2 \beta)^{-2} \text{d}B(t)$, which is reversible with respect to the XY measure. We proved that for this process the time it takes to change winding number behaves (roughly) like $\exp(2\beta J - \log N)$.
+</p>
+<p>In the picture you can see the winding number as a function of time for a certain realization of the process. The animation shows how the winding number changes (for a different realization). Look for the two rotors that point in opposite directions! (<a href="https://arxiv.org/src/2001.07950v1/anc">code</a>) </p>
+
+<h3><strong>Time scales of the Fredrickson-Andersen model on polluted $\mathbb{Z}^2$ and $\mathbb{Z}^3$</strong></h3>
 <p>With <a href="https://sites.google.com/view/eslivken">Erik Slivken</a>.
 <i>arXiv preprint <a href="https://arxiv.org/abs/1906.09949">arXiv:1906.09949</a></i> (2019).</p>
 <p>In this work we studied the Fredrickson-Andersen model on the polluted lattice (i.e. when removing some of the vertices at random). This model is a part of a large family of models called kinetically constrained models, that try to explain certain aspects of glasses and granular materials. We wanted to understand how typical time scales diverge when the density is very high. It's a question that's been studied before for many kinetically constrained models in homogeneous systems, and different models show some behavior that could also be seen experimentally.</p>
@@ -45,12 +78,12 @@ function pollutedBPrandlink(){
 }
 pollutedBPrandlink();
 </script>
-<h3>Diffusive Scaling of the Kob-Andersen Model in $\mathbb{Z}^d$</h3>
+<h3>Diffusive scaling of the Kob-Andersen model in $\mathbb{Z}^d$</h3>
 <p>With <a href="http://www.mat.uniroma3.it/users/martin/">Fabio Martinelli</a> and <a href="https://www.ceremade.dauphine.fr/~toninelli/">Cristina Toninelli</a>.
 <i>arXiv preprint <a href="https://arxiv.org/abs/1904.11078">arXiv:1904.11078</a> </i>(2019).</p>
 <p>The Kob-Andersen model is an interacting particle system evolving according to the Kawasaki dynamics, i.e., particles live on the vertices of $\mathbb{Z}^d$, and could jump to a neighboring site. In this particular model the particle could jump only to an empty site, and only if the number of empty neighbors it has passes some fixed threshold both before and after the jump.<br />We found that the relaxation time of this model has a diffusive scaling, that is, it grows as the square of the length.</p>
 
-<h3>Kinetically Constrained Models with Random Constraints</h3>
+<h3>Kinetically constrained models with random constraints</h3>
 <p><i>arXiv preprint <a href="https://arxiv.org/abs/1812.00774">arXiv:1812.00774</a></i> (2018).</p>
 <p>Kinetically constrained models (KCMs) are interacting particle systems whose dynamics is being slowed down by a kinetic constraint. They live on a graph, where each vertex (site) could be either empty or occupied. The state of a site could only be changed when the constraint is satisfied. When this is the case, sites update with rate $1$ - independently of everything, the site forgets its state, and gets a new random state which is empty with probability $q$ and occupied with probability $1-q$.</p>
 <p>One example is the Fredrickson-Andersen $j$-spin facilitated model (FAjf) on the the two dimensional lattice, where a site could only be updated if it has at least $j$ empty neighbors. Another example is the North-East model. Here we require both the site above and to the right to be empty for the constraint to be satisfied. In general, the constraints that we choose are easier to satisfy when there are more empty sites.</p>
@@ -59,7 +92,7 @@ pollutedBPrandlink();
 <p>In this paper I show how to use variational principles other than the spectral gap in order to understand how long it takes for some arbitrary site to become empty. This time could be much smaller than the relaxation time. For example, in the FA1f and NE mixture, the relaxation time is infinite but the emptying time of the origin is typically a power of $q$. For the FA1f and FA2f mixture, I show that the emptying time behaves again like a power of $q$ (here the relaxation time is exponential). In this case, I can also prove that this power is random, i.e., it changes from one realization of the noise to the other.</p>
 <div style="clear: both;">
 
-<h3><br />Metastable Behavior of Bootstrap Percolation on Galton-Watson Trees</h3>
+<h3><br />Metastable behavior of bootstrap percolation on Galton-Watson trees</h3>
 <p><i><a href="http://alea.impa.br/articles/v16/16-40.pdf">ALEA 16</a></i> (2019).</p>
 <p><img id="bpvid" src="threshold2bp0.png" alt="" width="450" align="right" style="cursor:pointer"/>
 <script>
@@ -78,7 +111,7 @@ I was interested in the time scaling near the critical point. For the continuous
 It turns out that there are many possible exponents for the scaling of the plateau with the distance from criticality, unlike the <a href="https://link.springer.com/article/10.1007/s10955-009-9798-x">case of a regular tree</a>, in which this exponent is always $1/2$. Another behavior that doesn't exist in regular trees is the appearance of more plateaus, and not just one at the limiting probability at criticality.</p>
 <div style="clear: both;">
 
-<h3><br />Hausdorff Dimension of the Record Set of a Fractional Brownian Motion</h3>
+<h3><br />Hausdorff dimension of the record Set of a fractional Brownian motion</h3>
 <p>With <a href="https://www.lpsm.paris/pageperso/benigni/index.html">Lucas Benigni</a>, <a href="https://www.lpsm.paris/pageperso/cosco/">Cl&eacute;ment Cosco</a> and <a href="http://www.phys.ens.fr/~wiese/">Kay Wiese</a>.
 <i><a href="https://projecteuclid.org/euclid.ecp/1522375381">Electronic Communications in Probability 23</a></i> (2018).<img src="recset.png" width="450" align="right" /></p>
 <p>The fractional Brownian motion with Hurst index H is a continuous Gaussian process. It has stationary increments, and it is self-similar with an exponent $H$ &ndash; stretching time by some scalar $\alpha$ and space by $\alpha^H$ doesn't change its law. For $H=1/2$ we get the normal Brownian motion, but for other values of $H$ the process is not Markovian.<br />
@@ -86,7 +119,7 @@ We were interested in its records, i.e., the times at which the process reaches 
 This reasoning works thanks to the Markov property, and for the fractional Brownian motion it is wrong. We showed in this work that unlike the zero set (that has dimension $1-H$) the record set has dimension H, so they coincide only for the Brownian motion.</p>
 <div style="clear: both;">
 
-<h3><br />Small Noise and Long Time Phase Diffusion in Stochastic Limit Cycle Oscillators</h3>
+<h3><br />Small noise and long time phase diffusion in stochastic limit cycle oscillators</h3>
 <p>With <a href="https://www.lpsm.paris/semoa/users/giacomin/index">Giambattista Giacomin</a> and <a href="http://math.univ-lyon1.fr/~poquet/">Christophe Poquet</a>.
 <i><a href="https://www.sciencedirect.com/science/article/pii/S0022039617305089?via%3Dihub">Journal of Differential Equations 264</a></i> (2018).
 <div style="float:right"\>
@@ -112,7 +145,7 @@ video.addEventListener('click', function() {
 The picture shows an example of a dynamical system with a stable limit cycle (black) and two realization of a noisy dynamics (blue and red). The simulation is of one period, and we see that some random phase difference is created. The animation shows both the unperturbed dynamics (blue) and the one with noise (red), and we see how the phase difference between the two evolves.</p>
 <div style="clear: both;">
 
-<h3><br />On Maximizing the Speed of a Random Walk in Fixed Environments</h3>
+<h3><br />On maximizing the speed of a random walk in fixed environments</h3>
 <p>With Amichai Lampert.
 <i><a href="https://projecteuclid.org/euclid.ecp/1465315579">Electronic Communications in Probability 18</a></i> (2013).</p><p>Consider a random walk on the discrete segment $[0,N]$ reflected at $0$. The random walk starts at $0$, and ends when it reaches $N$. The points of $[0,N]$ are of two types &ndash; the background and the boosts. In the background, the probability to move to the right is $q$ and $1-q$ to the left. At boosts, the probability to move to the right is $p$ and $1-p$ to the left. If we are allowed $k$ boosts, where should we put them in order to minimize the expected hitting time at $N$?<br />
 This question was solved <a href="https://projecteuclid.org/euclid.ejp/1465062335">here</a> for $\frac{1}{2} = q < p$, and the optimal placing is when the boosts are equally spaced. We extended this result to $\frac{1}{2} < q < p$, showing that the same spacing works.</p>
