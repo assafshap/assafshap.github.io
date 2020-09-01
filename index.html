@@ -15,21 +15,6 @@ h3{
 <script type="text/javascript"
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
-<script>
-function toggle_visibility(divID,buttonID){
-	//alert(divID);
-	getElementById(divID).style.display = '';
-	if(getElementById(divID).style.display=='none'){
-		alert('showing');
-		//getElementById(divID).style.display='';
-		//getElementById(buttonID).innerHTML = 'show less';
-	}else{
-		alert('hiding');
-		//getElementById(divID).style.display='none';
-		//getElementById(buttonID).innerHTML = 'show more';
-	}
-}
-</script>
 </head>
 <body leftmargin="20" topmargin="30">
 <h1 style="color: #5e9ca0;">Assaf Shapira</h1>
@@ -85,7 +70,7 @@ video1.addEventListener('click', function() {
 
 <h3>Diffusive scaling of the Kob-Andersen model in $\mathbb{Z}^d$</h3>
 With <a href="http://www.mat.uniroma3.it/users/martin/">Fabio Martinelli</a> and <a href="https://www.ceremade.dauphine.fr/~toninelli/">Cristina Toninelli</a>.
-<i>arXiv preprint <a href="https://arxiv.org/abs/1904.11078">arXiv:1904.11078</a> </i>(2019). <a href="papers/KA_relaxation_time.pdf">(PDF)</a><br/>
+<i> <a href="https://doi.org/10.1214/19-AIHP1035">Annales de l'Institut Henri Poincaré, Probabilités et Statistiques 56</a> </i>(2020). <a href="papers/KA_relaxation_time.pdf">(PDF)</a><br/>
 With Anatole Ertul. 
 <i>arXiv preprint <a href="https://arxiv.org/abs/2003.02531">arXiv:2003.02531</a> </i>(2020). <a href="papers/KA_tagged_particle.pdf">(PDF)</a><br/>
 <i>arXiv preprint <a href="https://arxiv.org/abs/2003.08495">arXiv:2003.08495</a> </i>(2020). <a href="papers/KA_hydrodynamic_limit.pdf">(PDF)</a>
@@ -119,14 +104,17 @@ The <a href="https://arxiv.org/abs/2003.08495">third paper</a> talks about the h
 
 <h3>Loop-erased random walk as a spin system observable</h3>
 With <a href="http://www.tylerhelmuth.net/">Tyler Helmuth</a>.
-<i>arXiv preprint <a href="https://arxiv.org/abs/2003.10928">arXiv:2003.10928</a> </i>(2020). <a href="papers/LERW.pdf">(PDF)</a>
+<i><a href="https://rdcu.be/b6rp3">Journal of Statistical Physics</i></a> (2020). <a href="papers/LERW.pdf">(PDF)</a>
+<br>
+With <a href="http://www.phys.ens.fr/~wiese/">Kay Wiese</a>.
+<i>arXiv preprint <a href="https://arxiv.org/abs/2006.07899">arXiv:2006.07899</a></i>(2020). <a href="papers/LERW2.pdf">(PDF)</a>
 <div id="LERW_show" style="color:lightblue" onclick="getElementById('LERW').style.display='';this.style.display='none';">show more</div>
 <div id="LERW" style="display:none">
 <div style="color:lightblue" onclick="getElementById('LERW').style.display='none';getElementById('LERW_show').style.display='';">hide more</div>
 <p>
 This project was inspired by an observation in the <a href="https://doi.org/10.1016/j.nuclphysb.2019.114696">physics literature</a>, relating the loop erased random walk with a $\phi^4$ theory with $n
 =-2$ components. We found two possible spin systems whose observables can be related to loop erased random walks. Both of them have two bosons and four fermions, which gives the total $n=-2$.
-The hope is that this could be the starting point of a rigorous renormalization procedure that could give information on the scaling limit of the loop erased random walk, like the <a href="https://doi.org/10.1016/j.nuclphysb.2019.114696">calculations of the Hausdorff dimension</a> that non-rigorous field theory techniques.</p>
+The hope is that this could be the starting point of a rigorous renormalization procedure that could give information on the scaling limit of the loop erased random walk, like the <a href="https://doi.org/10.1016/j.nuclphysb.2019.114696">calculations of the Hausdorff dimension</a> with non-rigorous field theory techniques.</p>
 </div>
 
 <h3><strong>Time scales of the Fredrickson-Andersen model on polluted $\mathbb{Z}^2$ and $\mathbb{Z}^3$</strong></h3>
@@ -136,7 +124,7 @@ With <a href="https://sites.google.com/view/eslivken">Erik Slivken</a>.
 <div id="polluted" style="display:none">
 <div style="color:lightblue" onclick="getElementById('polluted').style.display='none';getElementById('polluted_show').style.display='';">hide more</div>
 <p>In this work we studied the Fredrickson-Andersen model on the polluted lattice (i.e. when removing some of the vertices at random). This model is a part of a large family of models called kinetically constrained models, that try to explain certain aspects of glasses and granular materials. We wanted to understand how typical time scales diverge when the density is very high. It's a question that's been studied before for many kinetically constrained models in homogeneous systems, and different models show some behavior that could also be seen experimentally.</p>
-<p>But physical systems are not always homogeneous (e.g. a granular material with two grain types). In these cases, it could be more appropriate to take a dynamics in random environment. The random environment that we've taken is the polluted lattice, that's <a id="pollutedBPlink" onClick="pollutedBPrandlink()">already been analyzed</a> in a closely related model called the bootstrap percolation.</p>
+<p>But physical systems are not always homogeneous (e.g. a granular material with two grain types). In these cases, it could be more appropriate to take a dynamics in random environment. The random environment that we've taken is the polluted lattice, that's <a id="pollutedBPlink" onmouseup="pollutedBPrandlink()">already been analyzed</a> in a closely related model called the bootstrap percolation.</p>
 <p>Many of the tools used in order to understand kinetically constrained models in homogeneous environments stop working when the system is not homogeneous (e.g. the spectral gap). The reason is that in random systems remote regions that are not really typical influence the quantities that we study, even though they shouldn't effect the actual dynamics. We needed to find a way to analyze time scales of the model in a way which ignores these untypical regions. We managed to do that by looking at the hitting time of events that depend only on the state near the origin (or any arbitrary vertex).</p>
 <script>
 function pollutedBPrandlink(){
