@@ -62,7 +62,7 @@ video1.addEventListener('click', function() {
 </p>
 <p>Imagine that, for some fixed large $N$, the interaction $\beta J$ is so big, that it forces all angles $X_i-X_{i-1}$ to be very small. This way, the rotors look like a continuous field – give each point $t\in \mathbb{R}/\mathbb{Z}$ the value $X_{\lfloor Nt \rfloor}$. When $N$ is large, we can think of this map as (approximately) a continuous function from $\mathbb{R}/\mathbb{Z}$ to $\mathbb{R}/2\pi\mathbb{Z}$. If this is indeed the case, that function will have a winding number. The winding number is an integer, and it doesn't change under continuous deformations of the field, so if the dynamics we take is continuous, the winding number will stay fixed. An interesting aspect of this behavior is that it could keep the system out of equilibrium. The minimal energy is when the winding number is $0$, so when $\beta J$ is large the equilibrium should concentrate there. So if we start with a configuration whose winding number is non-zero the system could never reach equilibrium, which means that the state is a (meta)stable non-equilibrium state. This will remain true until the continuous field approximation breaks down, and only then the winding number would be able to change. 
 </p>
-<p>This approximation of a continuous field is based on the assumption that all the angles between neighboring rotors are small. It's actually not difficult to see that the winding number of the discrete chain could only change when two neighboring rotors point at opposite directions. This costs a free energy barrier that has two parts – the energy difference $2J$, and an entropy term $\log N$ coming from the fact that there are $N$ possible pairs of rotors. In the paper we analyzed the Itô process given by $\text{d}X(t)=-\nabla H \text{d}t + (2 \beta)^{-2} \text{d}B(t)$, which is reversible with respect to the XY measure. We proved that for this process the time it takes to change winding number behaves (roughly) like $\exp(2\beta J - \log N)$.
+<p>This approximation of a continuous field is based on the assumption that all the angles between neighboring rotors are small. It's actually not difficult to see that the winding number of the discrete chain could only change when two neighboring rotors point at opposite directions. This costs a free energy barrier that has two parts – the energy difference $2J$, and an entropy term $\log N$ coming from the fact that there are $N$ possible pairs of rotors. In the paper we analyzed the Itô process given by $\text{d}X(t)=-\nabla H \text{d}t + (2 \beta)^{-1/2} \text{d}B(t)$, which is reversible with respect to the XY measure. We proved that for this process the time it takes to change winding number behaves (roughly) like $\exp(2\beta J - \log N)$.
 </p>
 <p>In the picture you can see the winding number as a function of time for a certain realization of the process. The animation shows how the winding number changes (for a different realization). Look for the two rotors that point in opposite directions! (<a href="https://arxiv.org/src/2001.07950v1/anc">code</a>) </p>
 
@@ -80,7 +80,7 @@ With Anatole Ertul.
 <div id="KA" style="display:none">
 <div style="color:lightblue" onclick="getElementById('KA').style.display='none';getElementById('KA_show').style.display='';">hide more</div>
 <p>The Kob-Andersen model is an interacting particle system evolving according to the Kawasaki dynamics, i.e., particles live on the vertices of $\mathbb{Z}^d$, and could jump to a neighboring site. In this particular model the particle could jump only to an empty site, and only if the number of empty neighbors it has passes some fixed threshold both before and after the jump. This constraint slows down the system, and the larger the density its affect is stronger. Simulations run by physicists showed that when the density is high enough this effect is so drastic, that they conjectured that there is some critical density, and above that density the model is not diffusive any more (so when looking at distances of order $N$ the relevant time scale is strictly longer than order $N^2$).<br/>
-Whether or not a model is diffusive depends on the exact observable we're interested in. Each of the three papers in this series treats a different meaning of being diffusive, but the result in all of them is similar — the model is diffusive, and when the density is high the diffusion coefficient decays extremely fast (and in the same manner for all three observables). <br/> 
+Whether or not a model is diffusive depends on the exact observable we're interested in. Each of the three papers in this series treats a different meaning of being diffusive, but the result in all of them is similar — the model <i>is</i> diffusive, and when the density is high the diffusion coefficient decays extremely fast (and in the same manner for all three observables). <br/> 
 In the <a href="https://arxiv.org/abs/1904.11078">first paper</a>, we analyzed the relaxation time, which describes how long correlations take to decay in finite volume $N^d$. We showed that it grows like $C N^2$, meaning that it's diffusive, and $1/C$ is the diffusion coefficient. <br/>
 In the <a href="https://arxiv.org/abs/2003.02531">second paper</a> we studied at the path of a single tagged particle when the system is in its stationary state. If we look from very far away, so one lattice distance has length $1/N$, and fast forward the dynamics by a factor $N^2$, the path of the tagged particle looks like a Brownian motion. This is a type of diffusive scaling, and the diffusion coefficient is the one for the Brownian motion. <br/>
 The <a href="https://arxiv.org/abs/2003.08495">third paper</a> talks about the hydrodynamic limit of the model — take the model in finite volume $N^d$, with some initial density profile that's not constant. In the classical sense, hydrodynamic limit means that if we speed up time by $N^2$ the density profile solves (in the limit) a hydrodynamic equation. Then the model is diffusive if this hydrodynamic equation is non-degenerate, that is, the diffusion coefficient is non-zero. This can't happen in the Kob-Andersen model (at least for general initial density), because there's always a possibility for a blocked structure, when no particle has enough empty neighbors and the dynamics is stuck. This effect though is not very physical, since it's very noise intolerant — I prove in the paper that with a very small perturbation (that could be as small as we want) the model converges to a hydrodynamic limit. The dependence of the diffusion coefficient on the magnitude of the perturbation is negligible, so if we take it to $0$ (<i>after</i> taking $N$ to infinity) we get a non-degenerate hydrodynamic equation.
@@ -117,6 +117,14 @@ This project was inspired by an observation in the <a href="https://doi.org/10.1
 The hope is that this could be the starting point of a rigorous renormalization procedure that could give information on the scaling limit of the loop erased random walk, like the <a href="https://doi.org/10.1016/j.nuclphysb.2019.114696">calculations of the Hausdorff dimension</a> with non-rigorous field theory techniques.</p>
 </div>
 
+<h3><strong>Fredrickson-Andersen one spin facilitated model in stationarity</strong></h3>
+<i>arXiv preprint <a href="https://arxiv.org/abs/2005.13327">arXiv:2005.13327</a></i> (2020). <a href="papers/FA1f_stationarity.pdf">(PDF)</a>
+<div id="fa1fstationarity_show" style="color:lightblue" onclick="getElementById('fa1fstationarity').style.display='';this.style.display='none';">show more</div>
+<div id="fa1fstationarity" style="display:none">
+<div style="color:lightblue" onclick="getElementById('fa1fstationarity').style.display='none';getElementById('fa1fstationarity_show').style.display='';">hide more</div>
+In this note I proved a few small results on the Fredrickson-Andersen one spin facilitated model in the stationary state. The first is an answer to an open question form 2008 in <a href="https://link.springer.com/article/10.1007/s00440-007-0072-3">this paper</a>, about the relaxation time in dimensions 3 and above. The second is about the decay rate of the persistence function, and the third discusses the model on finite graphs.
+</div>
+
 <h3><strong>Time scales of the Fredrickson-Andersen model on polluted $\mathbb{Z}^2$ and $\mathbb{Z}^3$</strong></h3>
 With <a href="https://sites.google.com/view/eslivken">Erik Slivken</a>.
 <i>arXiv preprint <a href="https://arxiv.org/abs/1906.09949">arXiv:1906.09949</a></i> (2019). <a href="papers/FA_polluted.pdf">(PDF)</a>
@@ -142,6 +150,7 @@ pollutedBPrandlink();
 </script>
 </div>
 
+
 <h3>Metastable behavior of bootstrap percolation on Galton-Watson trees</h3>
 <i><a href="http://alea.impa.br/articles/v16/16-40.pdf">ALEA 16</a></i> (2019). 
 <div id="bp_gw_show" style="color:lightblue" onclick="getElementById('bp_gw').style.display='';this.style.display='none';">show more</div>
@@ -165,7 +174,7 @@ It turns out that there are many possible exponents for the scaling of the plate
 </div>
 <div style="clear: both;">
 
-<h3>Hausdorff dimension of the record Set of a fractional Brownian motion</h3>
+<h3>Hausdorff dimension of the record set of a fractional Brownian motion</h3>
 With <a href="https://www.lpsm.paris/pageperso/benigni/index.html">Lucas Benigni</a>, <a href="https://www.lpsm.paris/pageperso/cosco/">Cl&eacute;ment Cosco</a> and <a href="http://www.phys.ens.fr/~wiese/">Kay Wiese</a>.
 <i><a href="https://projecteuclid.org/euclid.ecp/1522375381">Electronic Communications in Probability 23</a></i> (2018). <a href="https://projecteuclid.org/download/pdfview_1/euclid.ecp/1522375381">(PDF)</a>
 <div id="fbm_show" style="color:lightblue" onclick="getElementById('fbm').style.display='';this.style.display='none';">show more</div>
