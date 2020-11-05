@@ -56,9 +56,9 @@ video1.addEventListener('click', function() {
 });
 </script>
 
-<p>The purpose of this project was to try to approach a model with some non-trivial topology from the dynamics point of view. The most famous model with this type of behavior is the XY model in two dimensions. In this model there's a <a href="https://iopscience.iop.org/article/10.1088/0022-3719/6/7/010">critical temperature</a>, starting from which isolated vortices could appear. Analyzing this model is very difficult already <a href="https://projecteuclid.org/euclid.cmp/1103920388"> in equilibrium</a>, and adding dynamics on top of that complicates things even further. We've decided to study a one dimensional chain, that still has some interesting topological behavior but is much easier to understand.</p>
+<p>The purpose of this project was to try to approach a model with some non-trivial topology from the dynamics point of view. The most famous model with this type of behavior is the XY model in two dimensions. In this model there's a <a href="https://iopscience.iop.org/article/10.1088/0022-3719/6/7/010">critical temperature</a>, where isolated vortices start to appear. Analyzing this model is very difficult already <a href="https://projecteuclid.org/euclid.cmp/1103920388"> in equilibrium</a>, and adding dynamics on top of that complicates things even more. We've decided to study a one dimensional chain, that still has some interesting topological behavior but is much easier to understand.</p>
 
-<p>So we take a chain of rotors, $X_1,\dots,X_N$, each lives on the cycle $\mathbb{R}/2\pi\mathbb{Z}$. They interact via the XY Hamiltonian, $H=-J\sum_{i=1} \cos(X_{i}-X_{i-1})$, and in order to see interesting topological effects we take periodic boundary conditions ($X_0=X_N$). When the temperature is fixed and the size of the system goes to infinity, it becomes trivial, because fixing one rotor to whatever value we want costs a finite energy, and once we do that the spins to the right no longer depend on the spins to the left. So correlations decay exponentially fast, and we can't expect to see any global behavior. If we do want to see topological effects, we should take the interaction strength $\beta J$ to infinity with $N$.
+<p>So we take a chain of rotors, $X_1,\dots,X_N$, each lives on the cycle $\mathbb{R}/2\pi\mathbb{Z}$. They interact via the XY Hamiltonian, $H=-J\sum_{i=1} \cos(X_{i}-X_{i-1})$, and in order to see interesting topological effects we take periodic boundary conditions ($X_0=X_N$). When the temperature is fixed and the size of the system goes to infinity, it becomes trivial, because fixing one rotor to whatever value we want costs a finite energy, and once we do that the spins to the right don't depend anymore on the spins to the left. So correlations decay exponentially fast, and we can't expect to see any global behavior. If we do want to see topological effects, we should take the interaction strength $\beta J$ to infinity with $N$.
 </p>
 <p>Imagine that, for some fixed large $N$, the interaction $\beta J$ is so big, that it forces all angles $X_i-X_{i-1}$ to be very small. This way, the rotors look like a continuous field – give each point $t\in \mathbb{R}/\mathbb{Z}$ the value $X_{\lfloor Nt \rfloor}$. When $N$ is large, we can think of this map as (approximately) a continuous function from $\mathbb{R}/\mathbb{Z}$ to $\mathbb{R}/2\pi\mathbb{Z}$. If this is indeed the case, that function will have a winding number. The winding number is an integer, and it doesn't change under continuous deformations of the field, so if the dynamics we take is continuous, the winding number will stay fixed. An interesting aspect of this behavior is that it could keep the system out of equilibrium. The minimal energy is when the winding number is $0$, so when $\beta J$ is large the equilibrium should concentrate there. So if we start with a configuration whose winding number is non-zero the system could never reach equilibrium, which means that the state is a (meta)stable non-equilibrium state. This will remain true until the continuous field approximation breaks down, and only then the winding number would be able to change. 
 </p>
@@ -107,22 +107,25 @@ With <a href="http://www.tylerhelmuth.net/">Tyler Helmuth</a>.
 <i><a href="https://rdcu.be/b6rp3">Journal of Statistical Physics</i></a> (2020). <a href="papers/LERW.pdf">(PDF)</a>
 <br>
 With <a href="http://www.phys.ens.fr/~wiese/">Kay Wiese</a>.
-<i>arXiv preprint <a href="https://arxiv.org/abs/2006.07899">arXiv:2006.07899</a></i> (2020). <a href="papers/LERW2.pdf">(PDF)</a>
+<i><a href="https://scipost.org/SciPostPhys.9.5.063">SciPost Physics 9</a></i> (2020). <a href="papers/LERW2.pdf">(PDF)</a>
 <div id="LERW_show" style="color:lightblue" onclick="getElementById('LERW').style.display='';this.style.display='none';">show more</div>
 <div id="LERW" style="display:none">
 <div style="color:lightblue" onclick="getElementById('LERW').style.display='none';getElementById('LERW_show').style.display='';">hide more</div>
 <p>
-This project was inspired by an observation in the <a href="https://doi.org/10.1016/j.nuclphysb.2019.114696">physics literature</a>, relating the loop erased random walk with a $\phi^4$ theory with $n
-=-2$ components. We found two possible spin systems whose observables can be related to loop erased random walks. Both of them have two bosons and four fermions, which gives the total $n=-2$.
-The hope is that this could be the starting point of a rigorous renormalization procedure that could give information on the scaling limit of the loop erased random walk, like the <a href="https://doi.org/10.1016/j.nuclphysb.2019.114696">calculations of the Hausdorff dimension</a> with non-rigorous field theory techniques.</p>
+This project was inspired by an observation in the <a href="https://doi.org/10.1016/j.nuclphysb.2019.114696">physics literature</a>. They noticed a relation between the loop erased random walk and a $\phi^4$ theory with $n=-2$ components.
+We found two possible spin systems with observables that can be related to loop erased random walks. Both of them have two bosons and four fermions, which gives the total $n=-2$.
+The hope is that this could be the starting point of a rigorous renormalization procedure, that could give information on the scaling limit of the loop erased random walk, like the <a href="https://doi.org/10.1016/j.nuclphysb.2019.114696">calculations of the Hausdorff dimension</a> with non-rigorous field theory techniques.</p>
 </div>
 
-<h3><strong>Fredrickson-Andersen one spin facilitated model in stationarity</strong></h3>
-<i>arXiv preprint <a href="https://arxiv.org/abs/2005.13327">arXiv:2005.13327</a></i> (2020). <a href="papers/FA1f_stationarity.pdf">(PDF)</a>
+<h3><strong>Spectral gap of the Fredrickson-Andersen one spin facilitated model</strong></h3>
+<i><a href=" https://rdcu.be/b9KDx">Journal of Statistical Physics</a> (2020).</i> <a href="papers/FA1f_gap.pdf">(PDF)</a>
 <div id="fa1fstationarity_show" style="color:lightblue" onclick="getElementById('fa1fstationarity').style.display='';this.style.display='none';">show more</div>
 <div id="fa1fstationarity" style="display:none">
 <div style="color:lightblue" onclick="getElementById('fa1fstationarity').style.display='none';getElementById('fa1fstationarity_show').style.display='';">hide more</div>
-In this note I proved a few small results on the Fredrickson-Andersen one spin facilitated model in the stationary state. The first is an answer to an open question form 2008 in <a href="https://link.springer.com/article/10.1007/s00440-007-0072-3">this paper</a>, about the relaxation time in dimensions 3 and above. The second is about the decay rate of the persistence function, and the third discusses the model on finite graphs.
+<p>
+In this note I proved two small results on the Fredrickson-Andersen one spin facilitated model in the stationary state. The first is an answer to an open question form 2008 in <a href="https://link.springer.com/article/10.1007/s00440-007-0072-3">this paper</a>, about the relaxation time in dimensions 3 and above. The second is about the relaxation time in finite graphs. 
+In the <a href="https://arxiv.org/abs/2005.13327">arXiv version</a> there's one more theorem, on the persistence function of the model in $\mathbb{Z}^d$.
+</p>
 </div>
 
 <h3><strong>Time scales of the Fredrickson-Andersen model on polluted $\mathbb{Z}^2$ and $\mathbb{Z}^3$</strong></h3>
