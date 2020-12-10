@@ -68,12 +68,16 @@ video1.addEventListener('click', function() {
 
 </div>
 
-<h3>Diffusive scaling of the Kob-Andersen model in $\mathbb{Z}^d$</h3>
-With <a href="http://www.mat.uniroma3.it/users/martin/">Fabio Martinelli</a> and <a href="https://www.ceremade.dauphine.fr/~toninelli/">Cristina Toninelli</a>.
-<i> <a href="https://doi.org/10.1214/19-AIHP1035">Annales de l'Institut Henri Poincaré, Probabilités et Statistiques 56</a> </i>(2020). <a href="papers/KA_relaxation_time.pdf">(PDF)</a><br/>
-With Anatole Ertul. 
-<i>arXiv preprint <a href="https://arxiv.org/abs/2003.02531">arXiv:2003.02531</a> </i>(2020). <a href="papers/KA_tagged_particle.pdf">(PDF)</a><br/>
-<i>arXiv preprint <a href="https://arxiv.org/abs/2003.08495">arXiv:2003.08495</a> </i>(2020). <a href="papers/KA_hydrodynamic_limit.pdf">(PDF)</a>
+<h3>Large scale dynamics of the Kob-Andersen model</h3>
+<i>Diffusive scaling of the Kob–Andersen model in $\mathbb{Z}^d$</i>, 
+with <a href="http://www.mat.uniroma3.it/users/martin/">Fabio Martinelli</a> and <a href="https://www.ceremade.dauphine.fr/~toninelli/">Cristina Toninelli</a>. 
+Appears in <a href="https://doi.org/10.1214/19-AIHP1035">Annales de l'Institut Henri Poincaré, Probabilités et Statistiques 56</a> (2020). <a href="papers/KA_relaxation_time.pdf">(PDF)</a><br/>
+
+<i>Self-Diffusion coefficient in the Kob-Andersen model</i>,
+with Anatole Ertul. arXiv preprint <a href="https://arxiv.org/abs/2003.02531">arXiv:2003.02531</a> (2020). <a href="papers/KA_tagged_particle.pdf">(PDF)</a><br/>
+
+<i>Hydrodynamic limit of the Kob-Andersen model</i>. 
+arXiv preprint <a href="https://arxiv.org/abs/2003.08495">arXiv:2003.08495</a> </i>(2020). <a href="papers/KA_hydrodynamic_limit.pdf">(PDF)</a>
 
 <div id="KA_show" style="color:lightblue" onclick="getElementById('KA').style.display='';this.style.display='none';">show more</div>
 
@@ -87,56 +91,23 @@ The <a href="https://arxiv.org/abs/2003.08495">third paper</a> talks about the h
 </p>
 </div>
 
-<h3>Kinetically constrained models with random constraints</h3>
-<i><a href="https://projecteuclid.org/euclid.aoap/1591603228">Annals of Applied Probability 30</a></i> (2018). <a href="papers/random_constraints.pdf">(PDF)</a>
+
+<h3>Kinetically constrained models in random environments</h3>
+<i>Kinetically constrained models with random constraints</i>. Appears in <a href="https://projecteuclid.org/euclid.aoap/1591603228">Annals of Applied Probability 30</a></i> (2018). <a href="papers/random_constraints.pdf">(PDF)</a><br/>
+<i>Time scales of the Fredrickson-Andersen model on polluted $\mathbb{Z}^2$ and $\mathbb{Z}^3$</i>, with <a href="https://sites.google.com/view/eslivken">Erik Slivken</a>.
+arXiv preprint <a href="https://arxiv.org/abs/1906.09949">arXiv:1906.09949</a></i> (2019). <a href="papers/FA_polluted.pdf">(PDF)</a>
+
 <div id="randconstraint_show" style="color:lightblue" onclick="getElementById('randconstraint').style.display='';this.style.display='none';">show more</div>
 
 <div id="randconstraint" style="display:none">
 <div style="color:lightblue" onclick="getElementById('randconstraint').style.display='none';getElementById('randconstraint_show').style.display='';">hide more</div>
-<p>Kinetically constrained models (KCMs) are interacting particle systems whose dynamics is being slowed down by a kinetic constraint. They live on a graph, where each vertex (site) could be either empty or occupied. The state of a site could only be changed when the constraint is satisfied. When this is the case, sites update with rate $1$ — independently of everything, the site forgets its state, and gets a new random state which is empty with probability $q$ and occupied with probability $1-q$.</p>
-<p>One example is the Fredrickson-Andersen $j$-spin facilitated model (FAjf) on the the two dimensional lattice, where a site could only be updated if it has at least $j$ empty neighbors. Another example is the North-East model. Here we require both the site above and to the right to be empty for the constraint to be satisfied. In general, the constraints that we choose are easier to satisfy when there are more empty sites.</p>
-<p>In this paper I studied KCMs in random environment, obtained by mixing constraints. The first mixture is of FA1f together with FA2f, and the second is a mixture of FA1f with North-East. In both cases we choose the constraint randomly for each vertex in the beginning, and then run the process.</p>
-<p>The main difficulty compared to the more classical KCMs, is that this model is not homogeneous — once fixing the constraints, different points on the lattice have different behavior. So in particular, if we look far enough we'll come across some &ldquo;untypical&rdquo; regions that are difficult to control. This is the reason that the relaxation time, which usually describes typical time scales of KCMs, is no longer the correct quantity to study. In many models the way to overcome this issue is by coupling methods, but KCMs are not attractive, so this solution doesn't work.</p>
-<p>In this paper I show how to use variational principles other than the spectral gap in order to understand how long it takes for some arbitrary site to become empty. This time could be much smaller than the relaxation time. For example, in the FA1f and NE mixture, the relaxation time is infinite but the emptying time of the origin is typically a power of $q$. For the FA1f and FA2f mixture, I show that the emptying time behaves again like a power of $q$ (here the relaxation time is exponential). In this case, I can also prove that this power is random, i.e., it changes from one realization of the noise to the other.</p>
-</div>
 
-<div style="clear: both;">
+<p>Kinetically constrained models is a family of interacting particle systems that try to explain certain aspects of glasses and granular materials. In order to do that, we think of particles that live on the vertices (sites) of some graph, usually at most one particle per site. Particles are allowed to appear and disappear, but only if there are enough empty sites near by (so the neighborhood isn't too dense). The exact meaning of "enough empty sites" depends on the model, for example in the Fredrickson-Andersen $j$-spin facilitated model (FAjf) it means that the site has at least $j$ empty neighbors.</p> 
+<p>In these two works I wanted to understand how typical time scales diverge when the density of particles is very high. It's a question that's been studied before for many kinetically constrained models in homogeneous systems, and different models show some behavior that could also be seen experimentally.</p>
+<p>But physical systems are not always homogeneous (e.g. a granular material with two grain types). In these cases, it could be more appropriate to take a dynamics in random environment. The <a href="https://projecteuclid.org/euclid.aoap/1591603228">first paper</a> deals with a couple of models that have mixed constraints (e.g. FAjf with different $j$ for different sites). In the <a href="https://arxiv.org/abs/1906.09949">second paper</a> the random environment that we took was the polluted lattice, that's <a id="pollutedBPlink" onmouseup="pollutedBPrandlink()">already been analyzed</a> in a closely related model called bootstrap percolation.</p>
+<p>Many of the tools used in order to understand kinetically constrained models in homogeneous environments stop working when the system is not homogeneous (e.g. relaxation time/spectral gap). The reason is that in random systems remote regions that are not really typical influence the quantities that we study, even though they shouldn't effect the actual dynamics. We needed to find a way to analyze time scales of the model in a way which ignores these untypical regions. We managed to do that by looking at the hitting time of events that depend only on the state near the origin (or any arbitrary vertex).</p>
+<p>For example, in the FA2f on polluted lattice, the relaxation time is infinite but the time to empty the origin is typically finite (and we can even say how it behaves at large densities). For the FA1f and FA2f mixture, the emptying time behaves like a power of $1-\text{density}$ (relaxation time is exponential). In this case, I also prove that this power is random, i.e., it changes from one realization of the noise to the other.</p>
 
-<h3>Loop-erased random walk as a spin system observable</h3>
-With <a href="http://www.tylerhelmuth.net/">Tyler Helmuth</a>.
-<i><a href="https://rdcu.be/b6rp3">Journal of Statistical Physics</i></a> (2020). <a href="papers/LERW.pdf">(PDF)</a>
-<br>
-With <a href="http://www.phys.ens.fr/~wiese/">Kay Wiese</a>.
-<i><a href="https://scipost.org/SciPostPhys.9.5.063">SciPost Physics 9</a></i> (2020). <a href="papers/LERW2.pdf">(PDF)</a>
-<div id="LERW_show" style="color:lightblue" onclick="getElementById('LERW').style.display='';this.style.display='none';">show more</div>
-<div id="LERW" style="display:none">
-<div style="color:lightblue" onclick="getElementById('LERW').style.display='none';getElementById('LERW_show').style.display='';">hide more</div>
-<p>
-This project was inspired by an observation in the <a href="https://doi.org/10.1016/j.nuclphysb.2019.114696">physics literature</a>. They noticed a relation between the loop erased random walk and a $\phi^4$ theory with $n=-2$ components.
-We found two possible spin systems with observables that can be related to loop erased random walks. Both of them have two bosons and four fermions, which gives the total $n=-2$.
-The hope is that this could be the starting point of a rigorous renormalization procedure, that could give information on the scaling limit of the loop erased random walk, like the <a href="https://doi.org/10.1016/j.nuclphysb.2019.114696">calculations of the Hausdorff dimension</a> with non-rigorous field theory techniques.</p>
-</div>
-
-<h3><strong>Spectral gap of the Fredrickson-Andersen one spin facilitated model</strong></h3>
-<i><a href=" https://rdcu.be/b9KDx">Journal of Statistical Physics</a> (2020).</i> <a href="papers/FA1f_gap.pdf">(PDF)</a>
-<div id="fa1fstationarity_show" style="color:lightblue" onclick="getElementById('fa1fstationarity').style.display='';this.style.display='none';">show more</div>
-<div id="fa1fstationarity" style="display:none">
-<div style="color:lightblue" onclick="getElementById('fa1fstationarity').style.display='none';getElementById('fa1fstationarity_show').style.display='';">hide more</div>
-<p>
-In this note I proved two small results on the Fredrickson-Andersen one spin facilitated model in the stationary state. The first is an answer to an open question form 2008 in <a href="https://link.springer.com/article/10.1007/s00440-007-0072-3">this paper</a>, about the relaxation time in dimensions 3 and above. The second is about the relaxation time in finite graphs. 
-In the <a href="https://arxiv.org/abs/2005.13327">arXiv version</a> there's one more theorem, on the persistence function of the model in $\mathbb{Z}^d$.
-</p>
-</div>
-
-<h3><strong>Time scales of the Fredrickson-Andersen model on polluted $\mathbb{Z}^2$ and $\mathbb{Z}^3$</strong></h3>
-With <a href="https://sites.google.com/view/eslivken">Erik Slivken</a>.
-<i>arXiv preprint <a href="https://arxiv.org/abs/1906.09949">arXiv:1906.09949</a></i> (2019). <a href="papers/FA_polluted.pdf">(PDF)</a>
-<div id="polluted_show" style="color:lightblue" onclick="getElementById('polluted').style.display='';this.style.display='none';">show more</div>
-<div id="polluted" style="display:none">
-<div style="color:lightblue" onclick="getElementById('polluted').style.display='none';getElementById('polluted_show').style.display='';">hide more</div>
-<p>In this work we studied the Fredrickson-Andersen model on the polluted lattice (i.e. when removing some of the vertices at random). This model is a part of a large family of models called kinetically constrained models, that try to explain certain aspects of glasses and granular materials. We wanted to understand how typical time scales diverge when the density is very high. It's a question that's been studied before for many kinetically constrained models in homogeneous systems, and different models show some behavior that could also be seen experimentally.</p>
-<p>But physical systems are not always homogeneous (e.g. a granular material with two grain types). In these cases, it could be more appropriate to take a dynamics in random environment. The random environment that we've taken is the polluted lattice, that's <a id="pollutedBPlink" onmouseup="pollutedBPrandlink()">already been analyzed</a> in a closely related model called the bootstrap percolation.</p>
-<p>Many of the tools used in order to understand kinetically constrained models in homogeneous environments stop working when the system is not homogeneous (e.g. the spectral gap). The reason is that in random systems remote regions that are not really typical influence the quantities that we study, even though they shouldn't effect the actual dynamics. We needed to find a way to analyze time scales of the model in a way which ignores these untypical regions. We managed to do that by looking at the hitting time of events that depend only on the state near the origin (or any arbitrary vertex).</p>
 <script>
 function pollutedBPrandlink(){
 	var lnk =  document.getElementById("pollutedBPlink");
@@ -151,6 +122,53 @@ function pollutedBPrandlink(){
 }
 pollutedBPrandlink();
 </script>
+</div>
+
+<div style="clear: both;">
+
+<h3>Field theoretical representation of the Loop-erased random walk</h3>
+<i>Loop-erased random walk as a spin system observable</i>, with <a href="http://www.tylerhelmuth.net/">Tyler Helmuth</a>.
+Appears in <a href="https://rdcu.be/b6rp3">Journal of Statistical Physics</a> (2020). <a href="papers/LERW.pdf">(PDF)</a><br/>
+<i>An exact mapping between loop-erased random walks and an interacting field theory with two fermions and one boson,</i> with <a href="http://www.phys.ens.fr/~wiese/">Kay Wiese</a>.
+Appears in <a href="https://scipost.org/SciPostPhys.9.5.063">SciPost Physics 9</a> (2020). <a href="papers/LERW2.pdf">(PDF)</a>
+<div id="LERW_show" style="color:lightblue" onclick="getElementById('LERW').style.display='';this.style.display='none';">show more</div>
+<div id="LERW" style="display:none">
+<div style="color:lightblue" onclick="getElementById('LERW').style.display='none';getElementById('LERW_show').style.display='';">hide more</div>
+
+<div style="float:right"\>
+	<video id="LERWvid" width="300" poster="LERW.jpg" style="cursor:pointer">
+		<source src="LERW.webm">
+	</video>
+</div>
+
+<script>
+var video2 =  document.getElementById("LERWvid");
+video2.addEventListener('ended', function() {
+	video2.load();
+	video2.removeAttribute("controls");
+});
+video2.addEventListener('click', function() {
+	video2.play();
+	video2.setAttribute("controls", "controls");
+});
+</script>
+<p>
+This project was inspired by an observation in the <a href="https://doi.org/10.1016/j.nuclphysb.2019.114696">physics literature</a>. They noticed a relation between the loop erased random walk and a $\phi^4$ theory with $n=-2$ components.
+In the <a href="http://www.tylerhelmuth.net/">first paper</a> We found two possible spin systems with observables that can be related to loop erased random walks. Both of them have two bosons and four fermions, which gives the total $n=-2$.
+The hope is that this could be the starting point of a rigorous renormalization procedure, that could give information on the scaling limit of the loop erased random walk, like the <a href="https://doi.org/10.1016/j.nuclphysb.2019.114696">calculations of the Hausdorff dimension</a> with non-rigorous field theory techniques.</p>
+<p>The <a href="https://scipost.org/SciPostPhys.9.5.063">second paper</a> shows how to reduce these spin systems to the standard $\phi^4$ theory, and also presents the argument of the first paper in a more approachable way for physicists.</p>
+<p>The picture to the right is of a loop erased random walk on the honeycomb lattice with the erased loops in pink. The video shows how it's constructed (backtracking steps are suppressed for the animation to look nicer). Simulation by <a href="http://www.phys.ens.fr/~wiese/">Kay Wiese</a>.</p>
+</div>
+
+<h3><strong>Spectral gap of the Fredrickson-Andersen one spin facilitated model</strong></h3>
+<i><a href=" https://rdcu.be/b9KDx">Journal of Statistical Physics</a> (2020).</i> <a href="papers/FA1f_gap.pdf">(PDF)</a>
+<div id="fa1fstationarity_show" style="color:lightblue" onclick="getElementById('fa1fstationarity').style.display='';this.style.display='none';">show more</div>
+<div id="fa1fstationarity" style="display:none">
+<div style="color:lightblue" onclick="getElementById('fa1fstationarity').style.display='none';getElementById('fa1fstationarity_show').style.display='';">hide more</div>
+<p>
+In this note I proved two small results on the Fredrickson-Andersen one spin facilitated model in the stationary state. The first is an answer to an open question form 2008 in <a href="https://link.springer.com/article/10.1007/s00440-007-0072-3">this paper</a>, about the relaxation time in dimensions 3 and above. The second is about the relaxation time in finite graphs. 
+In the <a href="https://arxiv.org/abs/2005.13327">arXiv version</a> there's one more theorem, on the persistence function of the model in $\mathbb{Z}^d$.
+</p>
 </div>
 
 
