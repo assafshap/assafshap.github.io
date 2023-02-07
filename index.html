@@ -27,6 +27,10 @@ div.showmore{
 <body leftmargin="20" topmargin="30">
 <h1 style="color: #5e9ca0;">Assaf Shapira</h1>
 <p><a href="mailto:assaf.shapira@normalesup.org" style="text-decoration:none;color:black">assaf.shapira@normalesup.org</a></p>
+<p>
+45 rue des Saints-Pères, Paris <br>
+Office 812D
+</p>
 <h2 style="color: #2e6c80;">About me</h2>
 
 <p>I'm an associate professor ("maître de conférences") in <a href="https://map5.mi.parisdescartes.fr/">MAP5</a> in Paris. I'm interested mostly in probability and statistical physics, and I work a lot on time scales of random processes.</p>
@@ -40,6 +44,29 @@ I continued the same line of work during a postdoc in <a href="http://www.matfis
 
 <h2 style="color: #2e6c80;">Projects & Publications</h2>
 
+<h3>Noncooperative models of kinetically constrained lattice gases </h3>
+arXiv preprint <a href="https://arxiv.org/abs/2301.13559 ">arXiv:2301.13559</a> </i>(2023). <a href="papers/noncooperative_kclg.pdf">(PDF)</a>
+
+<div id="noncooperative_show" class="showmore" onclick="getElementById('noncooperative').style.display='';this.style.display='none';">show more</div>
+<div style="display:none" id="noncooperative">
+<div class ="showmore" onclick="getElementById('noncooperative').style.display='none';getElementById('noncooperative_show').style.display='';">hide more</div>
+<p>
+Kinetically constrained lattice gases are models constructed in order to study glassy dynamics. They could be seen as a conservative version of kinetically constrained spin models.
+In a kinetically constrained lattice gas, particles live on the sites of $\mathbb{Z}^d$. Two particles aren't allowed to be at the same site, so all sites are either empty or occupied.
+In the dynamics, particles are allowed between sites. The model is called <i>kinetically constrained</i> because not all jumps are allowed. To be more accurate, particles only jump when there's plenty of free space around them.
+</p>
+<p>
+Adding this constraint slows down the system, especially when the density is large. If a particle wants to move, first we need to free up some space by emptying sites around it. But if these sites are occupied, we need to free up space around each of them and move the particles away. To do that we need to empty more sites, and move more particles, and so on. This only ends when there are already enough empty sites and we don't need to do anything in order to move the disruption. 
+The number of steps it takes until we manage to move the particle depends on the exact definition of the constraint.
+In some models, this procedure might never end. In other models we have to move plenty of particles in a very specific, coordinated, way.
+</p>
+<p>
+Noncooperative models are models where some small region with many vacancies could move around freely. Such a region is called a <i>mobile cluster</i>. So if we want to move a particle, what we need to do is to look around for a mobile cluster, then move it close to our particle. If this is done the right way, then thanks to the mobile cluster there are enough vacancies around the particle so it's allowed to jump.
+</p>
+<p>
+The general question I asked about these models is the way time scales in large systems. Because of the constraint we expect time scales are large when the density is high. I proved a few results that say that time scales are diffusive. This means the basic relation $\text{time} \propto \text{space}^2$ isn't violated by the constraint. The slowing down it causes only affects the coefficient. The results are general for all noncooperative models, so the next step would be to understand cooperative models better.
+</p>
+</div>
 
 <h3>Topologically induced metastability in a periodic XY chain</h3>
 With <a href="https://www.lpsm.paris/pageperso/cosco/">Clément Cosco</a>.
