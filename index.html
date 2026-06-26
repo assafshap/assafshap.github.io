@@ -42,6 +42,27 @@ I continued the same line of work during a postdoc in <a href="http://www.matfis
 
 <h2 style="color: #2e6c80;">Projects & Publications</h2>
 
+<h3>A Thomson-type variational principle for diffusion coefficients</h3>
+arXiv preprint <a href="https://arxiv.org/abs/2606.04636">arXiv:2606.04636</a><br/>
+
+<div id="Thomson_show" class="showmore" onclick="getElementById('Thomson').style.display='';this.style.display='none';">show more</div>
+<div style="display:none" id="Thomson">
+<div class ="showmore" onclick="getElementById('Thomson').style.display='none';getElementById('Thomson_show').style.display='';">hide more</div>
+<p>
+The basic problem I'm looking at in this paper is to estimate diffusion coefficients. In reversible conservative interacting particle systems, we usually expect the overall density to evolve according to a diffusion equation. If, for example, we start with high density in the left half of our system and low density in the right half, then there will be an overall flow to the right until the density becomes uniform. The diffusion coefficient tells us how fast this happens: smaller diffusion coefficient means that we need to wait for longer to see significant changes in the initial density. In some cases we can have 0 diffusion coefficient, which means that systems is sub-diffusive.
+</p><p>
+There are some interacting particle systems where we know the exact value of the diffusion coefficient (which are called gradient), but there are many interesting models that are not gradient. Even worse, there are important qualitative phenomena that never occur in gradient model (e.g. <a href="https://projecteuclid.org/journals/annals-of-applied-probability/volume-33/issue-5/Hydrodynamic-limit-for-the-KobAndersen-model/10.1214/22-AAP1898.short">cooperative behavior</a>).
+In the non-gradient case, a good way to anlyse the diffusion coefficient is via the Green-Kubo formula. The main difficulty of this formula, is that it involves solving a certain Poisson problem. 
+</p><p>
+One way many people approach this Poisson problem is using Dirichlet's principle. This is a variational principle that we use to express the diffusion coefficient as the minimum of some functional. That's a very good formulation if we want to bound the diffusion coefficient from above: we apply this functional to some function that we pick, and automatically get some upper bound. Improving the upper bound becomes a question of picking good test functions, which could be done theoretically or numerically.
+</p><p>
+The question I was interested in was finding <i>lower</i> bounds on diffusion coefficients. One way to do that is proving that our model is faster in some sense that another model. If we know the other model's diffusion coefficient (e.g. if it's gradient) then it provides the lower bound we're after.<br/>
+This paper takes a different approach: using Thomson's principle we write the diffusion coefficient as the maximum of a Thomson functional (acting on flows). Then any test flow we pick gives a lower bound on the diffusion coefficient.
+I used this principle to get lower bounds on one toy model, and explored different ways to find a good test flow.
+The next step for would be to apply this techniques to models where we're not sure the diffusion coefficient is non-zero.
+</p>
+</div>
+
 <h3>Hydrodynamic limit of the directed exclusion process</h3>
 With <a href="https://sites.google.com/view/federicosau/home">Federico Sau</a> and <a href="https://helios2.mi.parisdescartes.fr/~esaada/esaadacv.html">Ellen Saada</a>. arXiv preprint <a href="https://arxiv.org/abs/2604.08154">arXiv:2604.08154</a>.
 <p></p>
@@ -188,7 +209,7 @@ pollutedBPrandlink();
 
 <div style="clear: both;">
 <h3>Anchored advected interfaces, Oslo model, and roughness at depinning</h3>
-with <a href="http://www.phys.ens.fr/~wiese/">Kay Wiese</a>.
+With <a href="http://www.phys.ens.fr/~wiese/">Kay Wiese</a>.
 Appears in <a href="https://doi.org/10.1088/1742-5468/acd2bb">Journal of Statistical Mechanics</a> (2023). <a href="papers/aaEW.pdf">(PDF)</a>
 <p></p>
 </div>
@@ -196,7 +217,7 @@ Appears in <a href="https://doi.org/10.1088/1742-5468/acd2bb">Journal of Statist
 <div style="clear: both;">
 <h3>Hydrodynamics near criticality of the conservative lattice gas</h3>
 <i> Hydrodynamic behavior near dynamical criticality of a facilitated conservative lattice gas,</i> with <a href="http://chercheurs.lille.inria.fr/cerignou/homepage.html">Clément Erignoux</a>, Alexandre Roget, and <a href="http://math.univ-lyon1.fr/homes-www/msimon/">Marielle Simon</a>.
-Appears in <a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.110.L032101">Physical Review E 110</a> </i>(2024). <a href="papers/ERSS_2024.pdf">(PDF)</a> <br/>
+Appears in <a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.110.L032101">Physical Review E</a> </i>(2024). <a href="papers/ERSS_2024.pdf">(PDF)</a> <br/>
 <i>Scaling Relations For The CLG's Critical Exponents,</i> with <a href="http://chercheurs.lille.inria.fr/cerignou/homepage.html">Clément Erignoux</a> and  <a href="http://math.univ-lyon1.fr/homes-www/msimon/">Marielle Simon</a>. arXiv preprint <a href=" 	
 https://doi.org/10.48550/arXiv.2511.08074">arXiv:2511.08074</a> (2025). 
 <p></p>
@@ -208,7 +229,8 @@ https://doi.org/10.48550/arXiv.2511.08074">arXiv:2511.08074</a> (2025).
 <i>Loop-erased random walk as a spin system observable</i>, with <a href="http://www.tylerhelmuth.net/">Tyler Helmuth</a>.
 Appears in <a href="https://rdcu.be/b6rp3">Journal of Statistical Physics</a> (2020). <a href="papers/LERW.pdf">(PDF)</a><br/>
 <i>An exact mapping between loop-erased random walks and an interacting field theory with two fermions and one boson,</i> with <a href="http://www.phys.ens.fr/~wiese/">Kay Wiese</a>.
-Appears in <a href="https://scipost.org/SciPostPhys.9.5.063">SciPost Physics 9</a> (2020). <a href="papers/LERW2.pdf">(PDF)</a>
+Appears in <a href="https://scipost.org/SciPostPhys.9.5.063">SciPost Physics 9</a> (2020). <a href="papers/LERW2.pdf">(PDF)</a><br/>
+<i>Field theories for Laplacian Growth</i>, with Paolo Pisapia and <a href="http://www.phys.ens.fr/~wiese/">Kay Wiese</a>. arXiv preprint <a href="https://arxiv.org/abs/2606.27263">arXiv:2606.27263</a>.
 <div id="LERW_show" class="showmore" onclick="getElementById('LERW').style.display='';this.style.display='none';">show more</div>
 <div id="LERW" style="display:none">
 <div class="showmore" onclick="getElementById('LERW').style.display='none';getElementById('LERW_show').style.display='';">hide more</div>
@@ -235,6 +257,10 @@ This project was inspired by an observation in the <a href="https://doi.org/10.1
 In the <a href="http://www.tylerhelmuth.net/">first paper</a> we found two possible spin systems with observables that can be related to loop erased random walks. Both of them have two bosons and four fermions, which gives the total $n=-2$.
 The hope is that this could be the starting point of a rigorous renormalization procedure, that could give information on the scaling limit of the loop erased random walk, like the <a href="https://doi.org/10.1016/j.nuclphysb.2019.114696">calculations of the Hausdorff dimension</a> with non-rigorous field theory techniques.</p>
 <p>The <a href="https://scipost.org/SciPostPhys.9.5.063">second paper</a> shows how to reduce these spin systems to the standard $\phi^4$ theory, and also presents the argument of the first paper in a more approachable way for physicists.</p>
+<p>
+The <a href="https://arxiv.org/abs/2606.27263">third paper</a> takes this analysis one step further: we use an equivalent construction of the loop erased random walk as a <i>Laplacian random walk</i>. This construction is incremental: at each step we add one more step to the walk at random, but unlike the simple random walk this step depends on the past. Instead of picking randomly a position among all neighbors, we pick one with probability proportional to a certain potential. This potential solves a Dirichlet problem with boundary on the trace of the walk so far (which is why the word "Laplacian" is in the name).
+The field theory we study now is dynamical, taking into consideration the way the random walk was constructed. We hope this will open a path to study models such as the <i>b</i>-Laplacian random walk and DLA.
+</p>
 <p>The picture to the right is of a loop erased random walk on the honeycomb lattice with the erased loops in pink. The video shows how it's constructed (backtracking steps are suppressed for the animation to look nicer). Simulation by <a href="http://www.phys.ens.fr/~wiese/">Kay Wiese</a>.</p>
 </div>
 
